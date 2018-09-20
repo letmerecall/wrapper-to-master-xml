@@ -1,2 +1,1 @@
-# wrapper-to-master-xml
-qqq
+Pseudocode to process wrapper xml
