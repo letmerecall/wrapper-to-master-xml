@@ -44,13 +44,13 @@ Hypothizer XML and Master XML are given with the name, wrapper.xml and master.xm
                 else:
                     table_node.add(<table_column_tag / >)
             table_node.add(</ master_xml_node_child>)  
-    return xml_node
+        return xml_node
 
             
         
- *Function **fill_master_xml_field()** - Function to process xml nodes of type *field*
+ * Function **fill_master_xml_field()** - Function to process xml nodes of type *field*
        
-    Function fill_master_xml_field(master_element_node, master_node_tag, policy_xml, wrapper_nodes):
+       Function fill_master_xml_field(master_element_node, master_node_tag, policy_xml, wrapper_nodes):
           list xml_node = []
           xml_node.add(<mastser_node_tag>)
           #TODO: get all childern if master xml node
@@ -107,9 +107,9 @@ Hypothizer XML and Master XML are given with the name, wrapper.xml and master.xm
     
     
     
-Function **CreateXml()**
+* Function **CreateXml()** - Function to map wrapper xml to master xml
     
-    Function CreateXml(wrapper_xml, master_xml):
+      Function CreateXml(wrapper_xml, master_xml):
 
       list xml_nodes = []                    #the get the element 'Policy' 
       wrapper_nodes = wrapper_xml.child
