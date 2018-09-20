@@ -7,7 +7,7 @@ Hypothizer XML and Master XML are given with the name, wrapper.xml and master.xm
         table_mapping = {'InsuredPersons', 'CoverageDetails'}
     
     
-Function **fill_master_xml_table()**
+* Function **fill_master_xml_table()** - function to process xml nodes of type *table*
     
     Function fill_master_xml_table(master_element_node, master_node_tag, policy_xml, wrapper_nodes, table_mapping):
 
