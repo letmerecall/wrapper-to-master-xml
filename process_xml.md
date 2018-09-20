@@ -1,10 +1,11 @@
-        table_mapping = {'InsuredPersons':template_insured_person,
-                 'CoverageDetails':coverage_details}
+        
+        
+        table_mapping = {'InsuredPersons', 'CoverageDetails'}
     
     
 Function **fill_master_xml_table()**
     
-    Function fill_master_xml_table(master_element_node, master_node_tag, policy_xml, wrapper_nodes):
+    Function fill_master_xml_table(master_element_node, master_node_tag, policy_xml, wrapper_nodes, table_mapping):
 
         list xml_node = [<master_node_tag>]
         list table_node = []
