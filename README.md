@@ -1,7 +1,6 @@
-Pseudocode to map Hypothizer XML to master XML of Truecover
+This is a pseudocode to map Hypothizer XML to master XML of Truecover.
+Hypothizer XML and Master XML are given with the name of wrapper.xml and master.xml respectively. 
 
-
-        
         
         table_mapping = {'InsuredPersons', 'CoverageDetails'}
     
