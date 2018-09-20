@@ -2,7 +2,7 @@
                  'CoverageDetails':coverage_details}
     
     
-Function **fill_master_xml_table()***
+Function **fill_master_xml_table()**
     
     Function fill_master_xml_table(master_element_node, master_node_tag, policy_xml, wrapper_nodes):
 
@@ -43,7 +43,7 @@ Function **fill_master_xml_table()***
 
             
         
-       
+ Function **fill_master_xml_field()**
        
     Function fill_master_xml_field(master_element_node, master_node_tag, policy_xml, wrapper_nodes):
           list xml_node = []
@@ -102,7 +102,7 @@ Function **fill_master_xml_table()***
     
     
     
-    
+Function **CreateXml()**
     
     Function CreateXml(wrapper_xml, master_xml):
 
