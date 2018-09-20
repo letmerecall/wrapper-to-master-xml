@@ -48,7 +48,7 @@ Hypothizer XML and Master XML are given with the name, wrapper.xml and master.xm
 
             
         
- Function **fill_master_xml_field()**
+ *Function **fill_master_xml_field()** - Function to process xml nodes of type *field*
        
     Function fill_master_xml_field(master_element_node, master_node_tag, policy_xml, wrapper_nodes):
           list xml_node = []
