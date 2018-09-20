@@ -1,11 +1,6 @@
 This is a pseudocode to map Hypothizer XML to master XML of Truecover.
 Hypothizer XML and Master XML are given with the name, wrapper.xml and master.xml respectively. 
 
-
-* **table_mapping** - Contains all the table names in master.xml
-
-        table_mapping = {'InsuredPersons', 'CoverageDetails'}
-    
     
     
 * Function **CreateXml()** - Function to map wrapper xml to master xml
@@ -43,14 +38,10 @@ Hypothizer XML and Master XML are given with the name, wrapper.xml and master.xm
     
 * Function **fill_master_xml_table()** - function to process xml nodes of type *table*
     
-    Function fill_master_xml_table(master_element_node, master_node_tag, policy_xml, wrapper_nodes, table_mapping):
+      Function fill_master_xml_table(master_element_node, master_node_tag, policy_xml, wrapper_nodes):
 
         list xml_node = [<master_node_tag>]
         list table_node = []
-        
-        #TODO: Get table names from table_mapping
-        table_details = table_mapping.get(master_node_tag)
-
         
         #TODO: To get master_xml_node_children
         master_xml_node_children = master_node_original.child
