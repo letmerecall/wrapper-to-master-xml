@@ -7,6 +7,40 @@ Hypothizer XML and Master XML are given with the name, wrapper.xml and master.xm
         table_mapping = {'InsuredPersons', 'CoverageDetails'}
     
     
+    
+* Function **CreateXml()** - Function to map wrapper xml to master xml
+    
+         Function CreateXml(wrapper_xml, master_xml):
+
+              list xml_nodes = []                    #the get the element 'Policy' 
+              wrapper_nodes = wrapper_xml.child
+              master_nodes = master_xml.child
+
+
+              xml_nodes.add(<Policy>)
+              #TODO: Iterate over the nodes of master xml (childrens of 'policy')
+              for master_element_node in master_nodes:
+                  master_node_tag = master_element_node.tag
+
+                  #CASE 1: When node of master xml is present in wrapper xml; when node type is table
+                  #TODO: Add the node of type table form wrapper xml
+                  if master_node_tag is present in wrapper_nodes:
+                      # node is a table
+                      xml_nodes.add(fill_master_xml_table(master_element_node, master_node_tag, policy_xml, wrapper_nodes))
+                      updated_xml.add(xml_node)
+
+                  #CASE 2: When a node of master xml is not present in wrapper xml
+                  else:
+                     xml_nodes = fill_master_xml_field(master_element_node, master_node_tag, policy_xml, wrapper_nodes)
+
+                xml_nodes.add(</Policy>)
+                master_xml_nodes = list_to_string(xml_nodes)
+                master_xml_node_string = string_to_xml(master_xml_nodes)
+
+                return string_to_node(master_xml_node_string)
+    
+    
+    
 * Function **fill_master_xml_table()** - function to process xml nodes of type *table*
     
     Function fill_master_xml_table(master_element_node, master_node_tag, policy_xml, wrapper_nodes, table_mapping):
@@ -102,38 +136,3 @@ Hypothizer XML and Master XML are given with the name, wrapper.xml and master.xm
                   xml_node.add(master_xml_node_child_text)
                 
         return xml_node
-        
-    
-    
-    
-    
-* Function **CreateXml()** - Function to map wrapper xml to master xml
-    
-         Function CreateXml(wrapper_xml, master_xml):
-
-              list xml_nodes = []                    #the get the element 'Policy' 
-              wrapper_nodes = wrapper_xml.child
-              master_nodes = master_xml.child
-
-
-              xml_nodes.add(<Policy>)
-              #TODO: Iterate over the nodes of master xml (childrens of 'policy')
-              for master_element_node in master_nodes:
-                  master_node_tag = master_element_node.tag
-
-                  #CASE 1: When node of master xml is present in wrapper xml; when node type is table
-                  #TODO: Add the node of type table form wrapper xml
-                  if master_node_tag is present in wrapper_nodes:
-                      # node is a table
-                      xml_nodes.add(fill_master_xml_table(master_element_node, master_node_tag, policy_xml, wrapper_nodes))
-                      updated_xml.add(xml_node)
-
-                  #CASE 2: When a node of master xml is not present in wrapper xml
-                  else:
-                     xml_nodes = fill_master_xml_field(master_element_node, master_node_tag, policy_xml, wrapper_nodes)
-
-                xml_nodes.add(</Policy>)
-                master_xml_nodes = list_to_string(xml_nodes)
-                master_xml_node_string = string_to_xml(master_xml_nodes)
-
-                return string_to_node(master_xml_node_string)
