@@ -2,8 +2,9 @@
                  'CoverageDetails':coverage_details}
     
     
+Function **fill_master_xml_table()***
     
-    **Function fill_master_xml_table(master_element_node, master_node_tag, policy_xml, wrapper_nodes)** 
+    Function fill_master_xml_table(master_element_node, master_node_tag, policy_xml, wrapper_nodes):
 
         list xml_node = [<master_node_tag>]
         list table_node = []
