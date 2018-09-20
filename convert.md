@@ -1,7 +1,7 @@
 table_mapping = {'InsuredPersons':template_insured_person,
              'CoverageDetails':coverage_details}
 
-Function to process the node which is of type *TABLE*
+Function to process the node which is of type **TABLE**
 
     Function fill_master_xml_table(master_element_node, master_node_tag, policy_xml, wrapper_nodes):
     
@@ -45,8 +45,7 @@ Function to process the node which is of type *TABLE*
 
             
         
-       
-        
+    Function fill_master_xml_field():
         
 
 
